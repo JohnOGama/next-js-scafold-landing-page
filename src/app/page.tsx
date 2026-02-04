@@ -4,11 +4,11 @@ import CodeBlock from "@/shared/components/CodeBlock";
 
 // Links and Constants
 const LINKS = {
-  npm: "https://www.npmjs.com/package/scafold",
-  github: "https://github.com/JohnOGama/next-js-scafold",
+  npm: "https://www.npmjs.com/package/scaffold",
+  github: "https://github.com/JohnOGama/next-js-scaffold",
   linkedin: "https://www.linkedin.com/in/johnogama/",
   facebook: "https://www.facebook.com/CreatorVayne/",
-  quickStartGuide: "https://github.com/JohnOGama/next-js-scafold/blob/main/README.md",
+  quickStartGuide: "https://github.com/JohnOGama/next-js-scaffold/blob/main/README.md",
 } as const;
 
 const AUTHOR = {
@@ -55,7 +55,7 @@ export default function Home() {
             CLI Tool for Next.js
           </div>
           <h1 className="mb-6 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 dark:from-zinc-50 dark:via-zinc-100 dark:to-zinc-50 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl lg:text-7xl">
-            Scafold
+            Next.js Scaffold
           </h1>
           <p className="mb-4 max-w-2xl text-xl leading-8 text-zinc-700 dark:text-zinc-300 sm:text-2xl font-medium">
             A powerful CLI tool to scaffold Next.js projects with a structured, feature-based architecture
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-2">
                   <CodeBlock command={`git clone ${LINKS.github}.git`} />
-                  <CodeBlock command="cd next-js-scafold" />
+                  <CodeBlock command="cd next-js-scaffold" />
                   <CodeBlock command="npm install" />
                   <CodeBlock command="npm run build" />
                   <CodeBlock command="npm link" />
@@ -115,7 +115,7 @@ export default function Home() {
                     <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Interactive Mode</span>
                     <span className="text-xs px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 border border-green-500/30">Recommended</span>
                   </div>
-                  <CodeBlock command="next-js-scafold" />
+                  <CodeBlock command="next-js-scaffold" />
                 </div>
               </div>
             </div>
