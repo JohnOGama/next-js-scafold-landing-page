@@ -58,7 +58,7 @@ export default function Home() {
             Next.js Scaffold
           </h1>
           <p className="mb-4 max-w-2xl text-xl leading-8 text-zinc-700 dark:text-zinc-300 sm:text-2xl font-medium">
-            A powerful CLI tool to scaffold Next.js projects with a structured, feature-based architecture
+            Generate production-ready Next.js projects instantly with pre-configured TypeScript, Tailwind CSS, React Query, and a scalable feature-based architecture
           </p>
           <p className="mb-12 max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
             Clone, build, and link to start scaffolding Next.js projects locally
