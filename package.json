@@ -2,11 +2,16 @@
   "name": "next-js-scafold",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "bin": {
+    "next-js-scaffold": "./scripts/cli.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "g": "node scripts/generate-feature.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -27,6 +32,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.2.4",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
