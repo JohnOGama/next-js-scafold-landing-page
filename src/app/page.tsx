@@ -120,6 +120,37 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Feature Generator */}
+          <div className="w-full max-w-2xl mb-16">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">
+                Generate Features
+              </h2>
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm px-3 py-1 text-xs text-zinc-600 dark:text-zinc-400">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
+                </span>
+                New Feature
+              </div>
+            </div>
+            <div className="group relative rounded-xl bg-zinc-900 dark:bg-zinc-950 p-6 border border-zinc-800 shadow-2xl hover:shadow-zinc-900/50 dark:hover:shadow-zinc-950/50 transition-all duration-300">
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-blue-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-300"></div>
+              <div className="relative space-y-5">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Feature Generator</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">CLI Tool</span>
+                  </div>
+                  <CodeBlock command="npm run g <FEATURE_NAME>" />
+                  <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                    Generates a complete feature structure with API, service, types, validation, store, components, and hooks folders
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Features Grid */}
@@ -201,6 +232,19 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <div className="group relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm p-6 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300 hover:-translate-y-1">
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-300"></div>
+            <div className="relative">
+              <div className="mb-4 text-3xl group-hover:scale-110 transition-transform duration-300">⚙️</div>
+              <h3 className="mb-2 text-lg font-semibold text-black dark:text-zinc-50">
+                Feature Generator
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Built-in CLI to generate feature modules with boilerplate code
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* What's Included */}
@@ -257,7 +301,45 @@ export default function Home() {
                     <span className="text-zinc-400">•</span>
                     <span>Example Auth Feature</span>
                   </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-zinc-400">•</span>
+                    <span>Feature Generator CLI</span>
+                  </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Project Structure */}
+        <div className="relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm p-8 mb-16 shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50">
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+          <div className="relative">
+            <h2 className="mb-6 text-2xl font-semibold text-black dark:text-zinc-50">
+              Generated Project Structure
+            </h2>
+            <div className="group relative rounded-xl bg-zinc-900 dark:bg-zinc-950 p-4 border border-zinc-800">
+              <div className="text-xs font-mono text-zinc-400 dark:text-zinc-500 space-y-1 leading-relaxed">
+                <div>my-nextjs-app/</div>
+                <div className="ml-4">├── src/</div>
+                <div className="ml-8">├── app/ <span className="text-zinc-500"># Next.js app directory</span></div>
+                <div className="ml-8">├── config/ <span className="text-zinc-500"># Configuration files</span></div>
+                <div className="ml-8">├── features/ <span className="text-zinc-500"># Feature-based modules</span></div>
+                <div className="ml-12">│ └── auth/</div>
+                <div className="ml-16">│ ├── auth.api.ts</div>
+                <div className="ml-16">│ ├── auth.service.ts</div>
+                <div className="ml-16">│ ├── auth.type.ts</div>
+                <div className="ml-16">│ ├── auth.validation.ts</div>
+                <div className="ml-16">│ ├── components/</div>
+                <div className="ml-16">│ └── hooks/</div>
+                <div className="ml-8">├── shared/ <span className="text-zinc-500"># Shared utilities</span></div>
+                <div className="ml-8">├── stores/ <span className="text-zinc-500"># State management</span></div>
+                <div className="ml-8">└── tests/ <span className="text-zinc-500"># Test files</span></div>
+                <div className="ml-4">├── scripts/ <span className="text-zinc-500"># CLI scripts</span></div>
+                <div className="ml-8">└── generate-feature.js <span className="text-zinc-500"># Feature generator</span></div>
+                <div className="ml-4">├── public/ <span className="text-zinc-500"># Static assets</span></div>
+                <div className="ml-4">├── package.json</div>
+                <div className="ml-4">└── tsconfig.json</div>
               </div>
             </div>
           </div>
