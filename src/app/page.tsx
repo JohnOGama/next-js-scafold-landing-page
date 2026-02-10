@@ -9,7 +9,7 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/johnogama/",
   facebook: "https://www.facebook.com/CreatorVayne/",
   quickStartGuide: "https://github.com/JohnOGama/next-js-scaffold/blob/main/README.md",
-  nestQuickStart: "https://github.com/JohnOGama/next-js-scaffold/blob/main/readme/nestjs/README.md",
+  nestQuickStart: "/nestjs",
 } as const;
 
 const AUTHOR = {
@@ -32,7 +32,33 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-900/5 to-zinc-900/10 dark:from-transparent dark:via-zinc-950/20 dark:to-zinc-950/30 pointer-events-none"></div>
 
       {/* Content */}
-      <main className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 z-10">
+      <main className="relative mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 z-10">
+        {/* Header / Navigation */}
+        <header className="mb-10 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
+              Scaffold
+            </span>
+            <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400">
+              Next.js &amp; NestJS
+            </span>
+          </Link>
+          <nav className="flex items-center gap-3 text-sm">
+            <Link
+              href="/"
+              className="px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/60 text-zinc-700 dark:text-zinc-200 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
+            >
+              Next.js Scaffold
+            </Link>
+            <Link
+              href="/nestjs"
+              className="px-3 py-1.5 rounded-full border border-blue-500/80 dark:border-blue-400/80 bg-blue-500/90 dark:bg-blue-500/90 text-white hover:bg-blue-600 dark:hover:bg-blue-400 hover:border-blue-400 dark:hover:border-blue-300 transition-all shadow-sm hover:shadow-md"
+            >
+              NestJS Scaffold
+            </Link>
+          </nav>
+        </header>
+
         {/* Hero Section */}
         <div className="flex flex-col items-center justify-center text-center py-20">
           <div className="mb-8 relative">
